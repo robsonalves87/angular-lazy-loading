@@ -1,0 +1,9 @@
+<div class="cotainer">
+  <div class="header" [ngClass]="{ 'invisible': disabled }"></div>
+  <ul class="menu">
+    <li class="menu link" [routerLink]="['']" >Home</li>
+    <li class="menu link" [routerLink]="['inicial/home']">Inicial</li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
