@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.pipe(
       filter((e): e is NavigationEnd => e instanceof NavigationEnd),
-      map(e => e.url)
+      map(e => e.urlAfterRedirects)
     ).subscribe(url => {
       this.disabled = false;
       if (url === '/inicial/home'){
