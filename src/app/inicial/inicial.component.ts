@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-inicial',
   templateUrl: './inicial.component.html',
-  styleUrls: ['./inicial.component.scss']
+  styleUrls: ['./inicial.component.scss'],
 })
-export class InicialComponent {
-
-}
+export class InicialComponent {}

@@ -4,12 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'inicial',
-    loadChildren: () => import('./inicial/inicial.module').then(m => m.InicialModule)
+    loadChildren: () =>
+      import('./inicial/inicial.module').then((m) => m.InicialModule),
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

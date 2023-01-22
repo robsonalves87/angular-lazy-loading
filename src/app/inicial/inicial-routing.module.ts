@@ -4,11 +4,11 @@ import { InicialComponent } from './inicial.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: InicialComponent }
+  { path: 'home', component: InicialComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class InicialRoutingModule { }
+export class InicialRoutingModule {}
