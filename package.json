@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "prettier": "prettier --write .",
+    "prettier:check": "prettier --check .",
     "test:lint": "eslint . && prettier --check ."
   },
   "private": true,
@@ -53,5 +54,17 @@
     "prettier-eslint": "^15.0.1",
     "typescript": "~4.9.4"
   },
-  "pre-commit": "lint && prettier"
+  "pre-commit": "lint . && prettier --write .",
+  "lint-staged": {
+    "src/**/*.{js,ts,scss,md,html,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint . && prettier --check .",
+      "pre-push": "ng build --prod"
+    }
+  }
 }
