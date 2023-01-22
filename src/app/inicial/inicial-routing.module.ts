@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { InicialComponent } from './inicial.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: InicialComponent }
 ];
 
